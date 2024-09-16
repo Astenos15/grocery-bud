@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui;
+  background-color: var(--color-grey);
+}
+
+/* Variables */
+
+:root {
+  --color-primary: #008080;
+  --color-secondary: #000d0d;
+  --color-grey: #f7f7f7;
+  --color-grey-dark: #bbb;
+
+  --color-white: #fff;
+
+  --color-text-light: #e6f2f2;
+  --color-text-dark: #e6f2f2;
+
+  --shadow-dark: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+  --shadow-light: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+/* General CSS */
+
+main {
+  height: 100vh;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 9.6rem 0;
+}
+
+.section-center {
+  background-color: var(--color-white);
+  max-width: 40%;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: var(--shadow-light);
+}
+
+.form {
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 2rem;
+}
+
+.form h4 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.form__control {
+  display: grid;
+  grid-template-columns: 80fr 20fr;
+  width: 100%;
+}
+
+.form__control input {
+  padding: 1rem 0 1rem 1rem;
+  border: 1px solid var(--color-grey-dark);
+  border-radius: 2px;
+}
+
+.btn {
+  border: none;
+  background: none;
+  border-radius: 2px;
+  padding: 1rem 4rem;
+  color: var(--color-text-light);
+  text-transform: capitalize;
+}
+.btn-submit {
+  background-color: var(--color-primary);
+}
+.btn-delete {
+  background-color: var(--color-secondary);
+}
+
+.items__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+.items__list-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.items__list-info-details {
+  display: flex;
+  gap: 1rem;
+}
+
+.items__list-info-details p {
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+
+.Toastify__toast {
+  text-transform: capitalize;
+}
+
+/* Media Queries */
+
+/* 1200px */
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+/* 900px */
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+  .section-center {
+    max-width: 60%;
+  }
+}
+
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  main {
+    padding: 9.6rem 2rem;
+  }
+  .section-center {
+    max-width: 100%;
+  }
+}
